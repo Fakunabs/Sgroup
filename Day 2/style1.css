@@ -1,0 +1,244 @@
+body {
+  /* position: absolute; */
+  font-family: Arial, sans-serif;
+  margin: auto;
+}
+.container {
+  margin: auto;
+  width: fit-content;
+}
+.flex1 {
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+  /* margin-left: 200px; */
+  width: 1000px;
+}
+.squareJ {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  margin: 20px;
+  margin-left: 0;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.textJ {
+  /* width: fit-content; */
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: x-large;
+  font-weight: 600;
+}
+.jasonstroff {
+  font-size: 20px;
+  margin-right: auto;
+  font-weight: 530;
+}
+.fa-github {
+  font-size: 25px;
+  color: red;
+  /* margin-left: 850px; */
+}
+.fa-stack-overflow {
+  font-size: 25px;
+  color: red;
+  margin: 10px;
+}
+.fa-linkedin-square {
+  font-size: 25px;
+  color: red;
+  margin-left: 5px;
+}
+
+.flex2 {
+  display: flex;
+  margin-top: 0px;
+  /* margin-left: 100px; */
+}
+
+.img1 {
+  width: 460px;
+  height: 550px;
+  /* margin-left: 120px; */
+  margin-top: 50px;
+}
+.texttotal {
+  padding-top: 70px;
+  padding-left: 80px;
+  font-weight: 600;
+  flex-grow: 1;
+}
+.iam {
+  padding-top: 50px;
+  width: 360px;
+  height: 150px;
+  font-size: 40px;
+  font-weight: 790;
+}
+.temp {
+  display: flex;
+  align-items: center;
+  padding-top: 70px;
+}
+.redtext {
+  color: #f26464;
+  font-size: 35px;
+  font-weight: 800;
+}
+.Bruh {
+  /* flex:1; */
+  /* width: max-content; */
+  margin-right: 50px;
+}
+.Bruh .Lmao p {
+  font-weight: 100;
+}
+
+.Lmao {
+  margin-top: 15px;
+  /* padding-right: 0px; */
+}
+.flex3 {
+  /* align-items: center; */
+  margin-top: 45px;
+  /* margin-left: 220px; */
+  font-size: 20px;
+}
+.underline {
+  border-bottom: 4px solid #f26464;
+  padding-bottom: 5px;
+  font-weight: 700;
+}
+.flex4 {
+  margin-top: 45px;
+  /* margin-left: 220px; */
+  font-size: 23px;
+  width: 1000px;
+  height: 100px;
+  line-height: 33px;
+}
+button {
+  font-size: large;
+  padding: 12.5px;
+  background: transparent;
+  border: 2px solid #f26464;
+  border-radius: 22px;
+  color: #f26464;
+}
+button:hover {
+  color: white;
+  border-color: #f26464;
+  background-color: #f26464;
+  transition: 0.5s ease-in-out;
+}
+.flex5 {
+  margin: auto;
+  margin-top: 50px;
+  /* margin-left: 630px; */
+  width: fit-content;
+  outline: none;
+}
+.flex6 {
+  margin-top: 45px;
+  margin-bottom: 100px;
+  /* margin-left: 220px; */
+  font-size: 22px;
+  width: 1000px;
+  height: 100px;
+  line-height: 33px;
+  display: flex;
+}
+.coreskill,
+.otherskills {
+  /* margin-right: auto; */
+  flex: 1;
+  margin-right: 10px;
+}
+.coreskill p,
+.otherskills p {
+  margin-bottom: 45px;
+}
+.SkillDetails {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Skill {
+  font-size: large;
+  padding: 12.5px;
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  border-radius: 40px;
+  color: black;
+  margin: 10px 10px 10px;
+  /* margin-left: 0px; */
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.Skill:hover {
+  color: white;
+  border-color: #f26464;
+  background-color: #f26464;
+  transition: 0.3s ease-in-out;
+}
+.flex7 {
+  margin-top: 300px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+.flex8 {
+  width: 1000px;
+  display: flex;
+}
+.splitleft,
+.splitright {
+  /* margin-right: auto; */
+  flex: 1;
+  margin-right: 10px;
+}
+.time {
+  font-weight: 600;
+  font-size: 15.5px;
+}
+.company {
+  margin-top: 20px;
+  margin-bottom: 18.5px;
+  font-size: 25px;
+  color: #464646;
+}
+.level {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 17.5px;
+}
+.loremtext1 {
+  margin-top: 40px;
+  width: 400px;
+  line-height: 25px;
+  color: #767676;
+}
+.loremtext2 {
+  margin-top: 20px;
+  width: 400px;
+
+  line-height: 20px;
+}
+.li {
+  margin-bottom: 20px;
+  color: #767676;
+}
+li::marker {
+  font-size: 30px;
+  color: black;
+}
+
+.flex9 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-size: 20px;
+}
+.flex10 {
+  
+}

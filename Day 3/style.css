@@ -1,0 +1,179 @@
+html, body{
+  height: 100%;
+}
+body {
+  font-family: Arial, sans-serif !important;
+  margin: auto;
+}
+.header {
+  margin: auto;
+  width: fit-content;
+}
+
+.title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.textfirst {
+  align-items: center;
+  font-size: 15px;
+  color: #6489c0;
+}
+.category {
+  /* align-items: center; */
+  margin: auto;
+  width: fit-content;
+  outline: none;
+}
+.textsecond {
+  font-size: 38px;
+  font-weight: 799.9;
+}
+.container{
+  display: flex;
+  margin-top: 50px;
+  margin-right: 150px; /* cho nay cna phai sua */
+  margin-left:200px; /* cho nay cna phai sua */
+}
+.card {
+  flex: 1;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 10px #888888;
+  height:500px;
+  overflow: hidden;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  position: relative;
+}
+.card img{
+  height: 45%;
+  width: 100%;
+}
+.forsale {
+  width: 80px;
+  height: 23px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #4876b0;
+  margin-right: 20px;
+  margin-top: 20px;
+  opacity: 0.85;
+  border-radius: 5px;
+  color: #f6f9fe;
+  padding-top: 9px;
+  padding-left: 20px;
+  padding-bottom: -10px;
+  padding-right: 8px;
+  font-size: 14px;
+}
+.card .price{
+  float:right;
+}
+.apartment_name {
+  margin: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.apartment_name .price {
+  font-weight: 550;
+  font-size: 18px;
+  color: #7597c6;
+}
+.fa-location-arrow {
+  margin-left: 30px;
+  color: #7597c6;
+}
+.location {
+  margin-left: 15px;
+  color: #d0d0d0;
+}
+.brief_info {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 5px;  
+  font-size: 18px;
+}
+.brief_info i {
+  color: #7597c6;
+  margin: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  background-color: #f6f9fe;
+  padding: 15px;
+  
+}
+.brief_info span {
+  color: #969697;
+}
+
+.underline {
+  border-bottom: 1.5px solid #e1e1df;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.infomation {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 25px;
+  width: 300px;
+}
+.infomation img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.personal_name {
+  font-size: 18px;
+  margin-right: auto;
+  font-weight: 550;
+  color: #79797b;
+  margin-top: 15px;
+}
+
+/* .fa-heart {
+  font-size: 25px;
+  color: #aaaaaa;
+  margin-left: 5px;
+}
+.fa-share-alt {
+  font-size: 25px;
+  color: #aaaaaa;
+  margin: 10px;
+} */
+.name .price {
+  float: right;
+}
+.see_all {
+  margin: auto;
+  margin-top: 50px;
+  /* margin-left: 630px; */
+  width: fit-content;
+  outline: none;
+  padding-bottom: 20px;
+}
+button {
+  width: 170px;
+  height: 50px;
+  font-size: large;
+  padding: 12.5px;
+  background: transparent;
+  border: 2px solid #7597c6;
+  border-radius: 35px;
+  color: #7597c6;
+}
+button:hover {
+  color: white;
+  border-color: #7597c6;
+  background-color: #7597c6 ;
+  transition: 0.5s ease-in-out;
+}

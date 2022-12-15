@@ -1,0 +1,24 @@
+.water {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 43% 57% 30% 70% / 52% 30% 70% 48%;
+    box-shadow: inset 10px 10px 10px #0000000c,
+                15px 25px 10px #00000019,
+                inset -10px -10px 15px #ffffffe5;
+}
+.water::before, .water::after {
+    position:absolute;
+    background-color: #fff;
+    content: ' ';
+    border-radius: 65% 35% 53% 47% / 64% 65% 35% 36%;
+    width: 20px;
+    height: 20px;
+    top: 30px;
+    left: 30px;
+}
+.water::after {
+    transform:    translate(18px, -25px)
+                  scale(0.7)
+                  rotate(20deg);
+}
