@@ -1,0 +1,33 @@
+:root {
+  --background-color: #f6a24a;
+  --spinner-color: #fff;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  width: 200px;
+  overflow: visible;
+}
+
+svg circle {
+  stroke: var(--spinner-color);
+  transform-origin: 50px 50px;
+  animation: spin 1.1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
