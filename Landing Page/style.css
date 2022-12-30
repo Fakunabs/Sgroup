@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
+
+
+nav {
+    background-color: #020b15 !important;
+}
+.section-link {
+    font-family: 'Outfit', sans-serif;
+    text-decoration: none;
+    color: #fff !important;
+    font-size: 17px;
+    font-weight: weight;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.navbar-nav {
+    margin-left: 50px;
+}
+.selected-lang {
+    font-size: 16px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
