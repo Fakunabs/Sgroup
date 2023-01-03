@@ -290,4 +290,13 @@ li {
     padding-bottom: 130px;
     padding-top: 130px;
 }
+.container {
+    max-width: 960px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.align-items-center {
+    align-items: center!important;
+}
+
 
