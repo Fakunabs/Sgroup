@@ -702,5 +702,24 @@ li {
     transition: .3s linear;
     opacity: 0;
 }
-
-
+.tab-content>.active {
+    display: block;
+}
+.fade {
+    transition: opacity .15s linear;
+}
+.chart-content-inner .title {
+    font-size: 45px ;
+    margin-bottom: 20px;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+.chart-content-inner p {
+    color: #A4B4C3;
+    margin-bottom: 45px;
+}
+.chart-content-inner .btn {
+    background: #00C4F4 !important;
+    min-width: 160px;
+    padding: 21px 50px;
+}
