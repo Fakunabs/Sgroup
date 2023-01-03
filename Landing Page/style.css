@@ -584,3 +584,123 @@ p {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+.chart-bg {
+    background-size: cover;
+    background-position: center;
+    padding: 130px 0;
+}
+.chart-inner {
+    padding: 0 0;
+}
+.order-lg-2 {
+    order: 2!important;
+}
+.col-lg-6 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+.chart-wrap img {
+    margin-bottom: 75px;
+}
+.chart-wrap {
+    padding: 60px 30px 60px;
+    background: #0B1D33;
+    border-radius: 20px;
+    text-align: center;
+}
+.chart-wrap ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.chart-wrap ul li {
+    width: 50%;
+    text-align: left;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 8px;
+}
+li {
+    list-style: none;
+    display: list-item;
+}
+.chart-wrap ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #005F73;
+}
+.chart-wrap ul li:nth-child(2):before {
+    background: #F72585;
+}
+.chart-wrap ul li:nth-child(3):before {
+    background: #5DD400;
+}
+.chart-wrap ul li:nth-child(4):before {
+    background: #FF9700;
+}
+.chart-wrap ul li:nth-child(5):before {
+    background: #00C4F4;
+}
+.chart-wrap ul li:nth-child(6):before {
+    background: #007FF4;
+}
+.chart-content {
+    width: 80%;
+}
+.chart-content .nav-tabs {
+    border-bottom: none;
+    margin: 0 -20px;
+    margin-bottom: 50px;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    /* margin-bottom: 0; */
+    list-style: none;
+}
+.chart-content .nav-tabs {
+    border-bottom: none;
+    margin: 0 -20px;
+    margin-bottom: 50px;
+}
+.chart-content .nav-tabs .nav-item {
+    padding: 0 20px;
+}
+.chart-content .nav-tabs .nav-link {
+    margin-bottom: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+    padding: 0;
+    position: relative;
+}
+.chart-content .nav-tabs .nav-link.active::before {
+    opacity: 1;
+}
+.chart-content .nav-tabs .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: #00C4F4;
+    transition: .3s linear;
+    opacity: 0;
+}
+
+
