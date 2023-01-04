@@ -44,7 +44,7 @@ section {
 section {
   display: block;
 }
-.banner_bg {
+.banner-bg {
   background-image: url(https://smthemebazar.com/html/bigtech/assets/img/banner/banner_bg.jpg);
   width: 100%;
   height: 100vh;
@@ -69,12 +69,57 @@ section {
   );
   z-index: -1;
 }
+.banner-shape-wrap img.img-one {
+    top: 28%;
+    left: -3%;
+    animation: leftToRight 5s infinite linear;
+}
+.banner-shape-wrap img.img-two {
+    left: auto;
+    right: 8%;
+    top: 20%;
+}
+.banner-shape-wrap img.img-three {
+    left: auto;
+    right: -2%;
+    top: auto;
+    bottom: 14%;
+    animation: alltuchtopdown 3s infinite linear;
+}
+.banner-shape-wrap img {
+    position: absolute;
+    /* left: 0;
+    top: 0; */
+    z-index: -1;
+}
 .container {
   max-width: 960px;
   padding-left: 15px;
   padding-right: 15px;
 }
-
+@keyframes leftToRight {
+    0% {
+        transform: rotateX(0deg) translateX(0px);
+    }
+    50% {
+        transform: rotateX(0deg) translateX(50px);
+    }
+    100% {
+        transform: rotateX(0deg) translateX(0px);
+    }
+}
+@keyframes alltuchtopdown {
+    0% {
+        transform: rotateX(0deg) translateY(0px);
+    }
+    
+    50% {
+        transform: rotateX(0deg) translateY(-30px);
+    }
+    100% {
+        transform: rotateX(0deg) translateY(0px);
+    }
+}
 .row {
   --bs-gutter-x: 30px;
   --bs-gutter-y: 0;
@@ -691,6 +736,9 @@ li {
 .chart-content .nav-tabs .nav-link.active::before {
     opacity: 1;
 }
+.chart-content .nav-tabs .nav-link.active{
+    background: transparent;
+}
 .chart-content .nav-tabs .nav-link::before {
     content: "";
     position: absolute;
@@ -722,4 +770,208 @@ li {
     background: #00C4F4 !important;
     min-width: 160px;
     padding: 21px 50px;
+}
+
+.roadmap-area {
+    padding: 130px 0 50px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.roadmap-area::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(360deg, #0B1D33 0%, rgba(11, 29, 51, 0) 97.51%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    opacity: .8;
+}
+.bt-roadmap_x.mCustomScrollbar {
+    padding: 0 0 30px;
+}
+.bt-roadmap_x {
+    position: relative;
+}
+.mCustomScrollbar {
+    touch-action: pinch-zoom;
+}
+.bt-roadmap_x:not(.mCS_no_scrollbar):before {
+    top: calc(50% - 15px);
+}
+.bt-roadmap_x::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    /* top: calc(50% - 0px); */
+    transform: translateY(-50%);
+    width: 1670px;
+    height: 8px;
+    background: linear-gradient(294.72deg, #FF4581 9.05%, #4388DD 79.28%);
+    opacity: 0.1;
+}
+.mCustomScrollBox {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: 0;
+    direction: ltr;
+}
+.mCSB_horizontal.mCSB_outside>.mCSB_container {
+    min-height: 100%;
+}
+.mCSB_container {
+    overflow: hidden;
+    /* width: auto; */
+    height: auto;
+}
+.bt-roadmap-wrap {
+    display: flex;
+    padding: 0;
+    min-height: 490px;
+    margin: 10px 0 0;
+    justify-content: flex-end;
+}
+.bt-roadmap-item {
+    display: flex;
+    width: 370px;
+    flex: 0 0 auto;
+    height: 305px;
+    align-self: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.roadmap-title {
+    display: inline-block;
+    color: #00C4F4;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    letter-spacing: 0.1em;
+}
+.roadmap-content {
+    position: relative;
+    margin-left: 57px;
+    padding-left: 17px;
+    padding-top: 110px;
+}
+.roadmap-content::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: #00C4F4;
+}
+.roadmap-content .dot {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background: #00C4F4;
+    border-radius: 50%;
+}
+.roadmap-content span {
+    display: block;
+    color: #A4B4C3;
+}
+.roadmap-content .dot::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 32px;
+    height: 32px;
+    background: #00C4F4;
+    opacity: 0.1;
+    border-radius: 50%;
+}
+.roadmap-content .title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.roadmap-content span {
+    display: block;
+    color: #A4B4C3;
+}
+.bt-roadmap-item:not(:first-child) {
+    margin-left: -155px;
+}
+.bt-roadmap-item:nth-child(even) {
+    align-self: flex-start;
+    flex-direction: column-reverse;
+    margin-top: -10px;
+}
+.bt-roadmap-item:nth-child(even) .roadmap-title {
+    margin: 22px 0 0;
+}
+.bt-roadmap-item:nth-child(2) .roadmap-title {
+    color: #FF4581;
+}
+.bt-roadmap-item:nth-child(even) .roadmap-content {
+    padding: 0 0 110px 17px;
+}
+.bt-roadmap-item:nth-child(2) .roadmap-content::before, .bt-roadmap-item:nth-child(2) .dot, .bt-roadmap-item:nth-child(2) .dot::before {
+    background: #FF4581;
+}
+.bt-roadmap-item:nth-child(even) .roadmap-content .dot {
+    top: auto;
+    bottom: 0;
+}
+.bt-roadmap-item:nth-child(3) .roadmap-title {
+    color: #FF9700;
+}
+.bt-roadmap-item:nth-child(3) .roadmap-content::before, .bt-roadmap-item:nth-child(3) .dot, .bt-roadmap-item:nth-child(3) .dot::before {
+    background: #FF9700;
+}
+.bt-roadmap-item:nth-child(4) .roadmap-title {
+    color: #5DD400;
+}
+.bt-roadmap-item:nth-child(4) .roadmap-content::before, .bt-roadmap-item:nth-child(4) .dot, .bt-roadmap-item:nth-child(4) .dot::before {
+    background: #5DD400;
+}
+.bt-roadmap-item:nth-child(5) .roadmap-title {
+    color: #007FF4;
+}
+.bt-roadmap-item:nth-child(5) .roadmap-content::before, .bt-roadmap-item:nth-child(5) .dot, .bt-roadmap-item:nth-child(5) .dot::before {
+    background: #007FF4;
+}
+.bt-roadmap-item:nth-child(6) .roadmap-title {
+    color: #FF9700;
+}
+.bt-roadmap-item:nth-child(6) .roadmap-content::before, .bt-roadmap-item:nth-child(6) .dot, .bt-roadmap-item:nth-child(6) .dot::before {
+    background: #FF9700;
+}
+.bt-roadmap-item:nth-child(7) .roadmap-title {
+    color: #FF4581;
+}
+.bt-roadmap-item:nth-child(7) .roadmap-content::before, .bt-roadmap-item:nth-child(7) .dot, .bt-roadmap-item:nth-child(7) .dot::before {
+    background: #FF4581;
+}
+/*=======================================================*/
+/*=======================================================*/
+/*=======================================================*/
+/*=======================================================*/
+/*=======================================================*/
+/*=======================================================*/
+/*=======================================================*/
+.pt-60 {
+    padding-top: 60px;
+}
+.order-lg-0 {
+    order: 0!important;
+}
+.col-lg-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
 }
