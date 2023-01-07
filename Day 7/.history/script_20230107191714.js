@@ -141,7 +141,7 @@ const numbers = [1,2,3,5,6,7,4,7,3,2,1,6,7,8,7,7,1,7,3,7,9999,7,123,7]
 console.log(mostFrequentNumber(numbers)) // 7
 
 /*KẾT QUẢ
- Đây là lời giải thích cho đoạn mã trên:
+/* Đây là lời giải thích cho đoạn mã trên:
 1. Điều đầu tiên chúng ta làm là tạo một đối tượng sẽ lưu trữ số đếm của từng số trong mảng.
 2. Chúng tôi lặp qua mảng và kiểm tra xem số đó có trong đối tượng không. Nếu có, chúng tôi tăng số lượng. Nếu không, chúng ta thêm nó vào đối tượng với giá trị là 1.
 3. Chúng tôi lặp qua đối tượng và kiểm tra xem số nào có số lượng cao nhất. Chúng tôi lưu trữ số đó trong một biến gọi là kết quả.

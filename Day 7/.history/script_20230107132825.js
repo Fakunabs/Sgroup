@@ -72,16 +72,6 @@ console.log(isIncreaseChainNumber(number1))  // true
 console.log(isIncreaseChainNumber(number2)) // true
 console.log(isIncreaseChainNumber(number3)) // false
 
-/* Đây là lời giải thích cho đoạn mã trên:
-1. Tạo một hàm gọi là isIncreaseChainNumber
-2. Khai báo một biến có tên là số và chuyển nó thành một chuỗi
-3. Tạo vòng lặp for lặp qua chiều dài của số - 2
-4. Tạo một câu lệnh có điều kiện để kiểm tra xem số ở chỉ mục hiện tại có lớn hơn hoặc bằng số tiếp theo không và nếu số tiếp theo lớn hơn hoặc bằng số sau chỉ mục tiếp theo
-5. Nếu điều kiện là true, trả về false
-6. Ngược lại, trả về true
-7. Khai báo ba biến có tên là number1, number2, number3 và đặt chúng bằng 123456789n, 123432112321n, và 988811111n
-8. Gọi hàm isIncreaseChainNumber với tham số là number1, number2, number3 và in kết quả ra màn hình */
-
 
 // Câu 4 : Viết một hàm JavaScript trả về một chuỗi đã được thay thế mỗi ký tự với ký tự cách nó n ký tự trong bảng chữ cái. (mã hóa caesar)
 
@@ -140,8 +130,8 @@ const numbers = [1,2,3,5,6,7,4,7,3,2,1,6,7,8,7,7,1,7,3,7,9999,7,123,7]
 
 console.log(mostFrequentNumber(numbers)) // 7
 
-/*KẾT QUẢ
- Đây là lời giải thích cho đoạn mã trên:
+KẾT QUẢ
+/* Đây là lời giải thích cho đoạn mã trên:
 1. Điều đầu tiên chúng ta làm là tạo một đối tượng sẽ lưu trữ số đếm của từng số trong mảng.
 2. Chúng tôi lặp qua mảng và kiểm tra xem số đó có trong đối tượng không. Nếu có, chúng tôi tăng số lượng. Nếu không, chúng ta thêm nó vào đối tượng với giá trị là 1.
 3. Chúng tôi lặp qua đối tượng và kiểm tra xem số nào có số lượng cao nhất. Chúng tôi lưu trữ số đó trong một biến gọi là kết quả.
