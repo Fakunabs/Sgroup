@@ -207,10 +207,8 @@ console.log(longestWord(str)) // loooooong
 
 // Câu 9 : Viết hàm tính tổng các chữ số khác 5 của một số nguyên tố (lớn) sử dụng hàm reduce và filter
 
-const sum = (number) => {
-    const digits = number.toString().split('').map(Number)
-    const sum = digits.reduce((a, b) => a + b, 0)
-    return sum
+const sum(number) {
+    
   }
   
   console.log(sum(1231312321378127391237219312n)) // 90

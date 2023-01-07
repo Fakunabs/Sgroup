@@ -163,57 +163,11 @@ isIncludeJs();
 
 // Câu 7 : Viết hàm trả về tên tiếng Anh của tháng từ một số cụ thể: ví dụ 1 → January
 
-const getMonthName = (monthNumber) => {
+const getMonthName(monthNumber) {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     return months[monthNumber - 1]
-    
+
 }
    
 console.log(getMonthName(3)) // March
-console.log(getMonthName(9)) // April
-
-/* Đây là lời giải thích cho đoạn mã trên:
-1. Hàm getMonthName nhận một đối số duy nhất, đó là số tháng.
-2. Chúng ta sử dụng mảng months để lưu tên tháng, sử dụng số tháng làm chỉ mục.
-3. Chúng tôi trả về tên tháng từ mảng bằng cách sử dụng số tháng làm chỉ mục, bằng cách trừ 1 từ số tháng.
-4. Chúng ta gọi hàm getMonthName với đối số là số tháng 3, hàm này trả về tên tháng là March.
-5. Chúng ta gọi hàm getMonthName với đối số là số tháng 4, hàm này trả về tên tháng là April. */
-
-// Câu 8 : Viết một hàm JavaScript tìm từ dài nhất trong chuỗi
-
-const longestWord = (str) => {
-    const words = str.split(' ')
-    let longest = ''
-    words.forEach((word) => {
-        if (word.length > longest.length) {
-            longest = word
-        }
-    })
-    return longest
-}
-
-const str = "Little darlin', it's been a loooooong, cold, lonely winter"
-
-console.log(longestWord(str)) // loooooong
-
-/* Đây là lời giải thích cho đoạn mã trên:
-1. Chúng tôi khai báo một hàm có tên `longestWord` với tham số có tên là `str`.
-2. Chúng tôi chia chuỗi thành một mảng các từ.
-3. Chúng ta khai báo một biến có tên `longest` và gán cho nó một chuỗi rỗng.
-4. Chúng tôi lặp qua mảng từ và kiểm tra xem độ dài của từ hiện tại có lớn hơn độ dài của chuỗi trong `longest` hay không.
-5. Nếu đúng, chúng tôi gán từ hiện tại cho `dài nhất`.
-6. Chúng tôi trả về chuỗi `dài nhất`.
-7. Chúng tôi ghi kết quả vào bàn điều khiển. */
-
-// Câu 9 : Viết hàm tính tổng các chữ số khác 5 của một số nguyên tố (lớn) sử dụng hàm reduce và filter
-
-const sum = (number) => {
-    const digits = number.toString().split('').map(Number)
-    const sum = digits.reduce((a, b) => a + b, 0)
-    return sum
-  }
-  
-  console.log(sum(1231312321378127391237219312n)) // 90
-  console.log(sum(99999999999999999999999999999n))// 261
-  console.log(sum(12345678908765432123456555566n)) // 98
-  
+console.log(getMonthName(4)) // April
