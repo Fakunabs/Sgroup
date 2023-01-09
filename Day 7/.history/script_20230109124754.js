@@ -221,7 +221,7 @@ const sum = (number) => {
 // Câu 10 :
 let personName = localStorage.getItem("name");
 
-function hello() {
+function () {
   if (personName !== '' && personName != null) document.getElementById('demo').innerHTML = 'Hello ' + personName + "!";
   else {
     let personPrompt = prompt("Nhập tên của bạn");
@@ -232,4 +232,3 @@ function hello() {
   }
 };
 
-hello();

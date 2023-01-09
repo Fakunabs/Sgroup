@@ -232,4 +232,4 @@ function hello() {
   }
 };
 
-hello();
+hello()

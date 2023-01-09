@@ -14,14 +14,10 @@
         return name;
       }
       let name
-      if(localStorage.getItem("name")) {
-        name = localStorage.getItem("name")
-      } else {
-        name = getName()
-        // localStorage.setItem("name", name)
-      }
-      document.write(`Hello ${name})`);
-      localStorage.setItem("name" , name)
+      if(localStorage.getItem)()
+
+      hello();
     </script>
   </body>
+  <!-- <script src="./script.js"></script> -->
 </html>

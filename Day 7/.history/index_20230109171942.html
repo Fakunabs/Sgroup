@@ -18,10 +18,12 @@
         name = localStorage.getItem("name")
       } else {
         name = getName()
-        // localStorage.setItem("name", name)
+        localStorage.setItem("name", name)
       }
-      document.write(`Hello ${name})`);
-      localStorage.setItem("name" , name)
+      
+
+      hello();
     </script>
   </body>
+  <!-- <script src="./script.js"></script> -->
 </html>
