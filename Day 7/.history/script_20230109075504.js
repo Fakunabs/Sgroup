@@ -216,13 +216,11 @@ const sum = (number) => {
   console.log(sum(1231312321378127391237219312n)) // 90
   console.log(sum(99999999999999999999999999999n))// 261
   console.log(sum(12345678908765432123456555566n)) // 98
-
-
-// Câu 10 :
+  
 let personName = localStorage.getItem("name");
 
 window.onload = function () {
-  if (personName !== '' && personName != null) document.getElementById('demo').innerHTML = 'Hello ' + personName + "!";
+  if (personName !== '' && personName !=null) document.getElementById('demo').innerHTML = 'Hello ' + personName + "!";
   else {
     let personPrompt = prompt("Nhập tên của bạn");
     if (personPrompt != null && personPrompt !== '') {

@@ -222,7 +222,7 @@ const sum = (number) => {
 let personName = localStorage.getItem("name");
 
 window.onload = function () {
-  if (personName !== '' && personName != null) document.getElementById('demo').innerHTML = 'Hello ' + personName + "!";
+  if (personName !== '' && personName !=null) document.getElementById('demo').innerHTML = 'Hello ' + personName + "!";
   else {
     let personPrompt = prompt("Nhập tên của bạn");
     if (personPrompt != null && personPrompt !== '') {

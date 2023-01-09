@@ -1,9 +1,14 @@
-const sum = (number) => {
-    const digits = number.toString().split('').map(Number)
-    const sum = digits.reduce((a, b) => a + b, 0)
-    return sum
+let personName = localStorage.getItem("name");
+
+window.onload = function () {
+  console.log("personName: " + personName);
+  if (personName !== '' && personName != null) document.getElementById('demo').innerHTML = 'Hello ' + personName + "!";
+  else {
+    let personPrompt = prompt("Nhập tên của bạn");
+    console.log("personPrompt: " + personPrompt);
+    if (personPrompt != null && personPrompt !== '') {
+      document.getElementById('demo').innerHTML = 'Hello ' + personPrompt + "!";
+      localStorage.setItem("name", personPrompt);
+    } else location.reload();
   }
-  
-  console.log(sum(1231312321378127391237219312n)) // 90
-  console.log(sum(99999999999999999999999999999n))// 261
-  console.log(sum(12345678908765432123456555566n)) // 98
+};
