@@ -7,11 +7,10 @@ const TaylorSwift = {
             console.log('Error');
             return;
         }
+
         this._age = age;
-        
     }
 }
 TaylorSwift.age = 31;
 
 console.log(`Taylor Swift is ${TaylorSwift._age} years old.`);
-
