@@ -1,91 +1,339 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="login">
-      <h2 class="text">Login</h2>
-      <div>
-        <form action="nothing">
-          <label for="fname">gmail</label><br />
-          <input
-            class="name"
-            type="email"
-            id="fname"
-            name="fname"
-            value=""
-          /><br />
-          <label for="fname">ten nguoi dung</label><br />
-          <input
-            class="name"
-            type="account"
-            id="fname"
-            name="fname"
-            value=""
-          /><br />
-          <label for="fname">password</label><br />
-          <input
-            class="password"
-            type="password"
-            id="fname"
-            name="fname"
-            value=""
-          /><br /><br />
-          <button class="submit" type="button">Submit</button>
-        </form>
+    <div id="login-box">
+      <div class="left">
+        <h1>Sign up</h1>
+
+        <input type="text" name="username" placeholder="Username" />
+        <input type="text" name="email" placeholder="E-mail" />
+        <input type="text" name="phonenumber" placeholder="Phone" />
+        <input type="password" name="password" placeholder="Password" />
+
+        <button type="submit" name="signup_submit" >Sign up</button>  
       </div>
+
+      <div class="right">
+        <span class="loginwith">Sign in with<br />social network</span>
+
+        <button class="social-signin facebook">Log in with facebook</button>
+        <button class="social-signin twitter">Log in with Twitter</button>
+        <button class="social-signin google">Log in with Google+</button>
+      </div>
+      <div class="or">OR</div>
     </div>
-    <script>
-      let name = document.querySelector(".name");
-      let account = document.querySelector(".account");
-      let password = document.querySelector(".password");
-      let submit = document.querySelector(".submit");
-      let text = document.querySelector(".text");
-      submit.addEventListener("click", function () {
-        if (validateEmail(name.value) == null) {
-          text.innerHTML = "Email is not valid";
-          return;
-        }
-        if (account.value.length) {
-            for(let i = 0; i < account.value.length; i++) {
-                if(account.value[i] == " " || account.value[i] == ["0","1","2","3","4","5","6","7","8","9"]) {
-                    alert("Ten nguoi dung khong duoc co khoang trang hoac so");
-                    return;
-                }
-            }
-        }
-        if (password.value.length < 6) {
-          // text.innerHTML = "Password is not valid";
-          alert("Nhap mat khau hon 6 ky tu");
-          return;
-        }
-        if (
-          name.value == "gempro0501@gmail.com" &&
-          password.value == "12345678"
-        ) {
-          localStorage.setItem("name", name.value);
-          localStorage.setItem("password", password.value);
-          localStorage.getItem("name");
-          localStorage.getItem("password");
-          // localStorage.clear();
-          text.innerHTML = "Login Success";
-        } else {
-          text.innerHTML = "Login Fail";
-        }
-      });
-      const validateEmail = (email) => {
-        return String(email)
-          .toLowerCase()
-          .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          );
-      };
-      
-    </script>
+
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+      *:focus {
+        outline: none;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: #ddd;
+        font-size: 16px;
+        color: #222;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+      }
+
+      #login-box {
+        position: relative;
+        margin: 5% auto;
+        width: 600px;
+        height: 400px;
+        background: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      }
+
+      .left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 40px;
+        width: 300px;
+        height: 400px;
+      }
+
+      h1 {
+        margin: 0 0 20px 0;
+        font-weight: 300;
+        font-size: 28px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        display: block;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        padding: 4px;
+        width: 220px;
+        height: 32px;
+        border: none;
+        border-bottom: 1px solid #aaa;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        transition: 0.2s ease;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        border-bottom: 2px solid #16a085;
+        color: #16a085;
+        transition: 0.2s ease;
+      }
+
+      button[type="submit"] {
+        margin-top: 28px;
+        width: 120px;
+        height: 32px;
+        background: #16a085;
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+        transition: 0.1s ease;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover,
+      input[type="submit"]:focus {
+        opacity: 0.8;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        transition: 0.1s ease;
+      }
+
+      input[type="submit"]:active {
+        opacity: 1;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        transition: 0.1s ease;
+      }
+
+      .or {
+        position: absolute;
+        top: 180px;
+        left: 280px;
+        width: 40px;
+        height: 40px;
+        background: #ddd;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        line-height: 40px;
+        text-align: center;
+      }
+
+      .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        box-sizing: border-box;
+        padding: 40px;
+        width: 300px;
+        height: 400px;
+        background: url("https://goo.gl/YbktSj");
+        background-size: cover;
+        background-position: center;
+        border-radius: 0 2px 2px 0;
+      }
+
+      .right .loginwith {
+        display: block;
+        margin-bottom: 40px;
+        font-size: 28px;
+        color: #fff;
+        text-align: center;
+      }
+
+      button.social-signin {
+        margin-bottom: 20px;
+        width: 220px;
+        height: 36px;
+        border: none;
+        border-radius: 2px;
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        transition: 0.2s ease;
+        cursor: pointer;
+      }
+
+      button.social-signin:hover,
+      button.social-signin:focus {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        transition: 0.2s ease;
+      }
+
+      button.social-signin:active {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+        transition: 0.2s ease;
+      }
+
+      button.social-signin.facebook {
+        background: #32508e;
+      }
+
+      button.social-signin.twitter {
+        background: #55acee;
+      }
+
+      button.social-signin.google {
+        background: #dd4b39;
+      }
+    </style>
   </body>
+  <script src="app.js"></script>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="login">
+    <form name='form-login'>
+
+        <h1>REGISTER</h1>
+
+        <label for="name">Email</label>
+        <input type="email" id="name" placeholder="Username" required>
+
+        <label for="pw">Password</label>
+        <input type="password"
+               id= "pw"
+               placeholder="Password" required>
+
+        <ul class="helper-text">
+            <li class="length">Must be at least 8 characters long.</li>
+            <li class="lowercase">Must contain a lowercase letter.</li>
+            <li class="uppercase">Must contain an uppercase letter.</li>
+            <li class="special">Must contain a number or special character.</li>
+        </ul>
+        <input id="rgstr_btn" type="submit" value="Register" onclick="store()">
+
+    </form>
+</div>
+
+<div class="login">
+    <form name='form-login'>
+
+        <h1>SIGN IN</h1>
+
+        <label for="userName">Email</label>
+        <input type="email" id="userName" placeholder="Username" required>
+
+        <label for="userPw">Password</label>
+        <input type="password" id= "userPw" placeholder="Password" required>
+
+        <div id="remember">
+            <input type="checkbox" value="lsRememberMe" id="rememberMe"
+                   style="display: inline-block;">
+            <label>Remember me</label>
+        </div>
+
+        <input id= "login_btn" type="submit" value="Login" onclick="check()">
+
+    </form>
+</div>
+<style>
+  @charset "utf-8";
+  @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+  [class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+  }
+
+  body {
+    background: white;
+    color: white;
+    font: 87.5%/1.5em 'Open Sans', sans-serif;
+    margin: 0;
+  }
+
+  p {
+    line-height: 1.5em;
+  }
+
+  after { clear: both; }
+
+  .login {
+    margin: 50px auto;
+    width: 320px;
+  }
+
+  .login form {
+    margin: auto;
+    padding: 22px 22px 22px 22px;
+    width: 100%;
+    border-radius: 5px;
+    background: #282e33;
+    border-top: 3px solid #434a52;
+    border-bottom: 3px solid #434a52;
+  }
+
+  .login form span {
+    background-color: #363b41;
+    border-radius: 3px 0px 0px 3px;
+    border-right: 3px solid #434a52;
+    color: #606468;
+    display: block;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+  }
+
+  .login form input[type="email"] {
+    background-color: #3b4148;
+    border-radius: 0px 3px 3px 0px;
+    color: #a9a9a9;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 90%;
+    height: 50px;
+  }
+
+  .login form input[type="password"] {
+    background-color: #3b4148;
+    border-radius: 0px 3px 3px 0px;
+    color: #a9a9a9;
+    margin-bottom: 1em;
+    padding: 0 16px;
+    width: 90%;
+    height: 50px;
+  }
+
+  .login form input[type="submit"] {
+    background: #b5cd60;
+    border: 0;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  #login form input[type="submit"]:hover {
+    background: #16aa56;
+  }
+</style>
+</body>
 </html>
