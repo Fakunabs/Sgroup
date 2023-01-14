@@ -1,4 +1,12 @@
-submit.addEventListener("onclick", function () {
+let username = document.getElementById("username");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+let phonenumber = document.getElementById("phonenumber");
+let submit = document.getElementById("signup_submit" );
+let text = document.getElementById("text");
+
+
+submit.addEventListener("click", function () {
   // Username
   if (username.value.length) {
     for (let i = 0; i < username.value.length; i++) {
@@ -29,15 +37,14 @@ submit.addEventListener("onclick", function () {
   //   alert("So dien thoai khong hop le");
   //   return;
   // }
-  if (email.value == "gempro0501@gmail.com" && password.value == "12345678") {
+  if (password.value.length > 6 || validateEmail(email.value) != null) {
     localStorage.setItem("username", username.value);
     localStorage.setItem("email", email.value);
     localStorage.setItem("password", password.value);
-
     // localStorage.clear();
-    text.innerHTML = "Login Success";
+    text.innerHTML = "SIGN UP SUCCESS";
   } else {
-    text.innerHTML = "Login Fail";
+    text.innerHTML = "SIGN UP FAIL";
   }
 });
 
