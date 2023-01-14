@@ -3,7 +3,8 @@
   outline: none;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+  /* Code for Firefox */
   /* color: red; */
   background: #767677;
 }
@@ -84,7 +85,7 @@ button[type="submit"] {
   font-weight: 500;
   text-transform: uppercase;
   transition: 0.1s ease;
-  cursor: pointer; 
+  cursor: pointer;
   margin-right: 10px;
 }
 
@@ -187,4 +188,52 @@ button.social-signin.google {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-
+/* Making responsive for sigup-box fit into phone */
+@media screen and (max-width: 500px) {
+  #signup-box, #signin-box {
+    position: relative;
+    margin: 5% auto;
+    width: 414px;
+    height: auto;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    padding-left: 100px;
+  }
+  h1 {
+    padding-left: 50px;
+  }
+  .left {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+  }
+  .right {
+    position: relative;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+    background: url("https://goo.gl/YbktSj");
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 2px 2px 0;
+  }
+  .or {
+    position: relative;
+    top: -360px;
+    left: 120px;
+  }
+  #signin-box .or {
+    top : -490px;
+  }
+  #signin-box .right {
+    top: -150px;
+  }
+}
