@@ -85,7 +85,7 @@ document.getElementById("signin-submit2").addEventListener("click", function () 
     localStorage.getItem("password") == signInPassword.value
   ) {
     alert("Login Success");
-    window.open("https://www.facebook.com/fakunabs");
+    window.open("https://sgroupvn.org/");
   } else {
     alert("Login Fail");
   }
