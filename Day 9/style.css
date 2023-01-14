@@ -3,6 +3,16 @@
   outline: none;
 }
 
+::-moz-selection { /* Code for Firefox */
+  /* color: red; */
+  background: #767677;
+}
+
+::selection {
+  /* color: red; */
+  background: #767677;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -74,7 +84,8 @@ button[type="submit"] {
   font-weight: 500;
   text-transform: uppercase;
   transition: 0.1s ease;
-  cursor: pointer;
+  cursor: pointer; 
+  margin-right: 10px;
 }
 
 input[type="submit"]:hover,
@@ -137,6 +148,10 @@ button.social-signin {
   transition: 0.2s ease;
   cursor: pointer;
   border-radius: 20px;
+}
+
+.sign_up_flex {
+  display: flex;
 }
 
 button.social-signin:hover,

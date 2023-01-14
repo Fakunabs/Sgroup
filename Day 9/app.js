@@ -55,14 +55,39 @@ const validateEmail = (email) => {
     );
 };
 
-// Write a event listener for the submit button if the user click on the submit button is success, hide the sign up box and show the sign in box
 
 submit.addEventListener("click", function () {
- // write a conditon code if sign up success show the sign in box
   if (password.value.length > 6 || validateEmail(email.value) != null || username.value[i] != ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]) {
     document.getElementById("signin-box").style.display = "block";
     document.getElementById("signup-box").style.display = "none";
   }
 });
 
+document.getElementById("signin-submit").addEventListener("click", function () {
+  document.getElementById("signin-box").style.display = "block";
+  document.getElementById("signup-box").style.display = "none";
+});
+
+
+document.getElementById("signup-submit2").addEventListener("click", function () {
+  document.getElementById("signup-box").style.display = "block";
+  document.getElementById("signin-box").style.display = "none";
+});
+
+
+var signInEmail = document.getElementById("signin-email");
+var signInPassword = document.getElementById("signin-password");
+
+
+document.getElementById("signin-submit2").addEventListener("click", function () {
+  if (
+    localStorage.getItem("email") == signInEmail.value &&
+    localStorage.getItem("password") == signInPassword.value
+  ) {
+    alert("Login Success");
+    window.open("https://www.facebook.com/fakunabs");
+  } else {
+    alert("Login Fail");
+  }
+});
 
