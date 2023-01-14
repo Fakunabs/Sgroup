@@ -58,8 +58,8 @@ const validateEmail = (email) => {
 
 submit.addEventListener("click", function () {
   if (password.value.length > 6 || validateEmail(email.value) != null || username.value[i] != ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]) {
+    document.getElementById("signup-box").style.display = "none";
     document.getElementById("signin-box").style.display = "block";
-    document.getElementById("signup-box").style.display = "block";
   }
 });
 
