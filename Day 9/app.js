@@ -90,6 +90,3 @@ document.getElementById("signin-submit2").addEventListener("click", function () 
     alert("Login Fail");
   }
 });
-document.getElementsById("social-signin facebook").addEventListener("click", function () {
-  window.open("https://facebook.com/");
-});
