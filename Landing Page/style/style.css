@@ -1152,7 +1152,7 @@ p {
   margin-bottom: 3rem;
   flex-wrap: wrap;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 1000px) {
   .sales__content__info__nav {
     align-items: flex-start;
   }

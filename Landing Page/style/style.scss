@@ -35,7 +35,7 @@ h5.h6 {
 p {
   color: $blue;
 }
-// Header style
+
 
 .header {
   height: 90px;
@@ -334,7 +334,6 @@ p {
   }
 }
 
-// Mobile Menu
 
 .mobile__menu {
   position: fixed;
@@ -503,8 +502,6 @@ p {
   }
 }
 
-// Banner style
-
 #banner {
   @include subMobile {
     padding: 13rem 1.6rem 0;
@@ -651,7 +648,6 @@ p {
               transform: translateX(-50%);
               width: 2px;
               height: 14px;
-              // background-color: $blue;
             }
 
             &:nth-child(1) {
@@ -792,7 +788,7 @@ p {
   }
 }
 
-// About style
+
 
 #about {
   @include subMobile {
@@ -984,7 +980,6 @@ p {
     }
     &__list {
       @include flex(center, center);
-      // flex-wrap: wrap;
       width: max-content;
       margin-top: 2rem;
     }
@@ -1076,7 +1071,6 @@ p {
   }
 }
 
-// Sales style
 
 #sales {
   position: relative;
@@ -1279,11 +1273,10 @@ p {
   background-size: cover;
 }
 
-// Roadmap style
+
 
 #roadmap {
   position: relative;
-  // background-image: url("../img/banner_bg.jpg");
   height: 100%;
   z-index: 0;
 
@@ -1515,8 +1508,6 @@ p {
   }
 }
 
-// document area
-
 #document-area {
   padding-top: 60px;
 
@@ -1609,7 +1600,7 @@ p {
   }
 }
 
-// team area
+
 #team-area {
   padding-top: 13rem;
 }
@@ -1742,7 +1733,7 @@ p {
   }
 }
 
-// Contact
+
 
 #contact {
   padding: 11rem 0;
@@ -1925,7 +1916,6 @@ p {
   }
 }
 
-// footer
 footer {
   position: relative;
   &::after {
@@ -2172,10 +2162,6 @@ footer {
             }
           }
         }
-
-        // @include tablet {
-        //   width: 50% !important;
-        // }
       }
     }
   }

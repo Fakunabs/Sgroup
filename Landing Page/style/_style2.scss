@@ -1,4 +1,4 @@
-// Header
+
 .app-two {
   width: 100%;
   height: 100%;
@@ -281,8 +281,6 @@
   }
 }
 
-// about two
-
 .banner-two {
   padding: 18rem 0 0;
   position: relative;
@@ -298,13 +296,6 @@
     width: 100%;
     height: calc(100% - 164px);
     z-index: -1;
-
-    // @include tablet {
-    //   height: calc(100% - 120px);
-    // }
-    // @include mobile {
-    //   height: calc(100% - 95px);
-    // }
 
     &::before {
       content: "";
@@ -411,8 +402,6 @@
   }
 }
 
-// Countdown
-
 .countdown-two {
   &__wrap {
     width: 100%;
@@ -487,7 +476,6 @@
   }
 }
 
-// about
 
 #about-two {
   padding: 13rem 0;
@@ -600,7 +588,7 @@
   }
 }
 
-// choose us
+
 #choose-us-two {
   background-image: url("../img/page2/choose_bg.jpg");
   background-size: cover;
@@ -709,8 +697,6 @@
   }
 }
 
-// counter two
-
 .counter-two {
   width: 100%;
   max-width: 120rem;
@@ -776,8 +762,6 @@
     }
   }
 }
-
-// Roadmap two
 
 #roadmap-two {
   padding: 13rem 0 10rem;
@@ -1221,7 +1205,7 @@
     }
   }
 }
-// download
+
 
 #download-two {
   padding: 14rem 0;
@@ -1264,9 +1248,6 @@
     visibility: hidden;
   }
 }
-
-// FAQ
-
 #faq-two {
   background: #f3f6fc;
   padding: 120px 0 130px;
@@ -1298,8 +1279,6 @@
         border-radius: 0;
       }
 
-      // border-top-left-radius: 100px;
-      // border-top-right-radius: 100px;
       &__question {
         @include flex(center, space-between);
         cursor: pointer;
@@ -1344,7 +1323,6 @@
       }
 
       &__answer {
-        // display: none;
         height: 0;
         overflow: hidden;
         transition: all 0.2s linear;
@@ -1407,7 +1385,6 @@
   }
 }
 
-// Contact
 
 #contact-two {
   background-image: url("../img/page2/choose_bg.jpg");
@@ -1579,7 +1556,6 @@
   }
 }
 
-// Newsletter
 
 .newsletter {
   width: 100%;
@@ -1667,8 +1643,6 @@
     }
   }
 }
-
-// Footer
 
 .footer {
   width: 100%;

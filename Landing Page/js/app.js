@@ -21,7 +21,6 @@ const listItemsWrap = document.querySelector(".about__why-choose-us__wrap");
 sliderMouse(listItemsWrap);
 sliderMouse(roadMapListWrap);
 
-// Scroll Header
 
 window.addEventListener("scroll", () => {
   if (
@@ -81,11 +80,6 @@ mobileMenuBlogToggle.onclick = function () {
     subMenuBlog.classList.remove("active");
   }
 };
-
-// mobileMenuToggle.addEventListener("click", () => {
-
-// });
-
 function handleScrollTop() {
   window.scrollTo({
     top: 0,
@@ -94,7 +88,6 @@ function handleScrollTop() {
   });
 }
 
-// Timer Countdown
 const timer = setInterval(() => {
   const currentDay = new Date().getTime();
   const distance = comingDay - currentDay;
@@ -139,7 +132,6 @@ function sliderMouse(slider) {
   });
 }
 
-// Effect Scroll
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -153,7 +145,6 @@ const observer = new IntersectionObserver((entries) => {
 
 const hideEffectElements = document.querySelectorAll(".hide__effect");
 hideEffectElements.forEach((el) => observer.observe(el));
-// Active Header Navbar
 const sectionIdElements = document.querySelectorAll(".section__id");
 let navigationItems = document.querySelectorAll(".navigation__item");
 navigationItems = Array.from(navigationItems);
