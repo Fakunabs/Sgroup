@@ -97,3 +97,4 @@ const observer = new IntersectionObserver((entries) => {
 
 const hideEffectElements = document.querySelectorAll(".hide__effect");
 hideEffectElements.forEach((el) => observer.observe(el));
+
