@@ -19,7 +19,11 @@ function addTask(event) {
 }
 
 function clearList() {
-  toDoList.innerHTML = "";
+  // toDoList.innerHTML = "";
+  let clear  = confirm("Do you want to clear the list?");
+  if (clear === true) {
+    toDoList.innerHTML = "";
+  }
 }
 
 toDoList.addEventListener("click", toggleTaskCompletion);
