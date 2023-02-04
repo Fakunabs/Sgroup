@@ -8,7 +8,6 @@ let phonenumber = document.getElementById("phonenumber");
 let submit = document.getElementById("signup_submit" );
 let text = document.getElementById("text");
 
-
 submit.addEventListener("click", function () {
   // Username
   if (username.value.length) {
@@ -44,7 +43,6 @@ submit.addEventListener("click", function () {
   } else {
     text.innerHTML = "SIGN UP FAIL";
   }
-  
 });
 
 const validateEmail = (email) => {

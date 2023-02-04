@@ -119,3 +119,10 @@ body {
   }
 }
 
+.completed {
+  text-decoration: line-through;
+}
+
+#clear .button {
+  background-color: rgb(224, 57, 57);
+}
