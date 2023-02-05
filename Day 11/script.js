@@ -3,9 +3,26 @@ const input = document.querySelector(".form__input");
 const toDoList = document.querySelector(".toDoList");
 const clearBtn = document.querySelector("#clear .clearBtn");
 
+document.addEventListener("DOMContentLoaded", function () {
+  const toDoList = document.querySelector(".toDoList");
+  toDoList.innerHTML = JSON.parse(localStorage.getItem("tasks")) || "";
+  const tasks = document.querySelectorAll("li");
+  tasks.forEach((task) => {
+    addTaskListeners(task);
+  });
+});
+
+window.addEventListener("beforeunload", function () {
+  localStorage.setItem("tasks", JSON.stringify(toDoList.innerHTML));
+});
+
+const savedTasks = localStorage.getItem("tasks");
+if (savedTasks) {
+  toDoList.innerHTML = JSON.parse(savedTasks);
+}
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
   if (input.value.trim() === "") {
     alert("Please enter a task");
     return;
@@ -48,7 +65,13 @@ const addTaskListeners = (task) => {
     let taskText = task.querySelector("span");
     let newTask = prompt("Enter new task:", taskText.textContent);
     if (newTask) {
-      taskText.textContent = newTask;
+      taskText.innerHTML = `${newTask}
+    <div class="icons">
+      <i class="far fa-check-circle circle"></i>
+      <i class="far fa-edit edit"></i>
+      <i class="far fa-trash-alt delete"></i>
+    </div>`;
+      addTaskListeners(task);
     }
   });
 };
