@@ -85,3 +85,31 @@ clearBtn.addEventListener("click", function () {
   const toDoList = document.querySelector(".toDoList");
   toDoList.innerHTML = "";
 });
+
+// Set time interval to 1 day
+
+const oneDay = 24 * 60 * 60 * 1000; // 1 day in milliseconds
+
+window.setInterval(() => {
+  const currentTime = new Date().getTime();
+  const tasks = document.querySelectorAll("li");
+  tasks.forEach((task) => {
+    const taskTime = task.dataset.time;
+    if (currentTime - taskTime >= oneDay) {
+      task.remove();
+    }
+  });
+}, oneDay);
+
+
+const li = document.createElement("li");
+const taskTime = new Date().getTime();
+li.dataset.time = taskTime;
+li.innerHTML = `${input.value} 
+  <div class="icons">
+    <i class="far fa-check-circle circle"></i>
+    <i class="far fa-edit edit"></i>
+    <i class="far fa-trash-alt delete"></i>
+  </div>`;
+
+toDoList.appendChild(li);
