@@ -53,7 +53,7 @@ body {
   display: flex;
   overflow: auto;
   display: flex;
-  flex-direction: column;
+    flex-direction: column-reverse;
 }
 .chat-box > .chat-box-body #chat_messages {
   width: 100%;
