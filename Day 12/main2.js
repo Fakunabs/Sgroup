@@ -1,7 +1,12 @@
 let i = 1;
+
+// Lấy tham chiếu đến thành phần HTML cần thiết
 const messagesContainer = document.getElementById("chat_messages");
-const messageInput = document.getElementById("chat_input").value;
-const nameInput = document.getElementById("name_input").value;
+const messageInput = document.getElementById("chat_input");
+const nameInput = document.getElementById("name_input");
+const sendButton = document.getElementById("send");
+
+// Lấy dữ liệu từ server và render lên giao diện
 axios
   .get("https://63e393dec919fe386c09bbaa.mockapi.io/sgroup/message")
   .then((response) => {
@@ -33,59 +38,49 @@ axios
     toNewestMess();
   });
 
+// Hàm xử lý cuộn đến tin nhắn mới nhất
 function toNewestMess() {
   setTimeout(() => {
     i--;
-    const new_message = document.getElementById(i.toString());
-    new_message.scrollIntoView();
+    const newMessage = document.getElementById(i.toString());
+    newMessage.scrollIntoView();
   }, 0);
 }
 
-// document.getElementById("send").onclick = function () {
-//   const messageInput = document.getElementById("chat_input").value;
-//   const nameInput = document.getElementById("name_input").value;
-//   const messagesContainer = document.getElementById("chat_messages");
-//   i++;
-//   const messageElement = document.createElement("div");
-//   messageElement.className = "message other-message";
-//   messageElement.id = i++;
-//   messageElement.innerHTML = `
-//         <div class="profile my-profile">
-//           ${nameInput}
-//         </div>
-//         <div class="content">
-//           <span>${messageInput}</span>
-//         </div>
-//       `;
-//   messagesContainer.appendChild(messageElement);
-//   toNewestMess();
-// };
+// Xử lý sự kiện click vào nút gửi
+sendButton.addEventListener("click", function () {
+  const message = messageInput.value;
+  const name = nameInput.value;
 
-document.getElementById("send").onclick = function () {
-  const messageInput = document.getElementById("chat_input").value;
-  const nameInput = document.getElementById("name_input").value;
-  const messagesContainer = document.getElementById("chat_messages");
-
+  // Gửi tin nhắn mới lên server
   axios
     .post("https://63e393dec919fe386c09bbaa.mockapi.io/sgroup/message", {
-      content: messageInput,
-      name: nameInput,
+      content: message,
+      name: name,
       isOwn: true,
     })
     .then(() => {
       i++;
       const messageElement = document.createElement("div");
       messageElement.className = "message other-message";
-      messageElement.id = i++;
-      messageElement.innerHTML = `
+      messageElement.id = i;
+      messageElement.innerHTML = 
+      ` 
         <div class="profile my-profile">
-          ${nameInput}
+          <span>${name}</span>
         </div>
         <div class="content">
-          <span>${messageInput}</span>
+            <span>${message}</span>
         </div>
-      `;
+        `;
       messagesContainer.appendChild(messageElement);
       toNewestMess();
     });
-};
+});
+
+// Xử lý sự kiện nhấn phím Enter
+messageInput.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    sendButton.click();
+  }
+});
