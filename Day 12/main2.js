@@ -8,7 +8,7 @@ const sendButton = document.getElementById("send");
 
 // Lấy dữ liệu từ server và render lên giao diện
 axios
-  .get("https://63e393dec919fe386c09bbaa.mockapi.io/sgroup/message")
+  .get("https://635d4fb7cb6cf98e56b20ae8.mockapi.io/api/listpost/message")
   .then((response) => {
     response.data.forEach((message) => {
       let messageClass, profileClass, profileImg, profileName;
@@ -54,7 +54,7 @@ sendButton.addEventListener("click", function () {
 
   // Gửi tin nhắn mới lên server
   axios
-    .post("https://63e393dec919fe386c09bbaa.mockapi.io/sgroup/message", {
+    .post("https://635d4fb7cb6cf98e56b20ae8.mockapi.io/api/listpost/message", {
       content: message,
       name: name,
       isOwn: true,
