@@ -98,3 +98,12 @@ messageInput.addEventListener("keypress", function (event) {
     sendButton.click();
   }
 });
+
+let docTitle = document.title;
+window.addEventListener("blur", () => {
+  document.title = "See you again :(";
+})
+
+window.addEventListener("focus", () => {
+  document.title = docTitle;
+})
