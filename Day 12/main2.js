@@ -1,5 +1,5 @@
 let i = 1;
-
+var accKey;
 // Lấy tham chiếu đến thành phần HTML cần thiết
 const messagesContainer = document.getElementById("chat_messages");
 const messageInput = document.getElementById("chat_input");
@@ -8,11 +8,11 @@ const sendButton = document.getElementById("send");
 
 // Lấy dữ liệu từ server và render lên giao diện
 axios
-  .get("https://635d4fb7cb6cf98e56b20ae8.mockapi.io/api/listpost/message")
+  .get("https://63e4a5638e1ed4ccf6e2de9d.mockapi.io/fakunabs/massage/Chat")
   .then((response) => {
     response.data.forEach((message) => {
-      let messageClass, profileClass, profileImg, profileName;
-      if (message.isOwn) {
+      let messageClass, profileClass, profileName;
+      if (message.key === localStorage.getItem("accKey")) {
         messageClass = "message my-message";
         profileClass = "profile my-profile";
         profileName = `<span>${message.name}</span>`;
@@ -21,13 +21,14 @@ axios
         profileClass = "profile other-profile";
         profileName = `<span>${message.name}</span>`;
       }
+      // console.log(message.key+" "+accKey)
       const messageElement = document.createElement("div");
       messageElement.className = messageClass;
       messageElement.id = i;
       i++;
       messageElement.innerHTML = `
         <div class="${profileClass}">
-          ${profileName}
+          ${profileName} 
         </div>
         <div class="content">
           <span>${message.content}</span>
@@ -47,22 +48,29 @@ function toNewestMess() {
   }, 0);
 }
 
+//Xử lý sự kiện
+nameInput.addEventListener("change", function () {
+  accKey = nameInput.value;
+  localStorage.setItem("accKey", accKey);
+})
+
 // Xử lý sự kiện click vào nút gửi
 sendButton.addEventListener("click", function () {
   const message = messageInput.value;
   const name = nameInput.value;
-
-  // Gửi tin nhắn mới lên server
-  axios
-    .post("https://635d4fb7cb6cf98e56b20ae8.mockapi.io/api/listpost/message", {
+  if (name === "") { alert("Bạn chưa nhập tên"); return; }
+  else {
+    // Gửi tin nhắn mới lên server
+    axios
+    .post("https://63e4a5638e1ed4ccf6e2de9d.mockapi.io/fakunabs/massage/Chat", {
       content: message,
       name: name,
-      isOwn: true,
+      key: accKey,
     })
     .then(() => {
       i++;
       const messageElement = document.createElement("div");
-      messageElement.className = "message other-message";
+      messageElement.className = "message my-message";
       messageElement.id = i;
       messageElement.innerHTML = 
       ` 
@@ -76,6 +84,12 @@ sendButton.addEventListener("click", function () {
       messagesContainer.appendChild(messageElement);
       toNewestMess();
     });
+
+    messageInput.value=null;
+    messageInput.value = trim(messageInput.value)
+  }
+  
+  
 });
 
 // Xử lý sự kiện nhấn phím Enter
