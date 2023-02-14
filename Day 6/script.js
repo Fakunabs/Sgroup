@@ -11,4 +11,5 @@ for (let i = 0;i < num_student;i++){
     students.push(new Student(name, age))
 }
 
+
 console.log(students)
