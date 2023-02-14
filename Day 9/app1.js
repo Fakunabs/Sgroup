@@ -8,6 +8,7 @@ let phonenumber = document.getElementById("phonenumber");
 let submit = document.getElementById("signup_submit" );
 let text = document.getElementById("text");
 
+
 submit.addEventListener("click", function () {
   // Username
   if (username.value.length) {
