@@ -98,7 +98,7 @@ messageInput.addEventListener("keypress", function (event) {
     sendButton.click();
   }
 });
-
+// Xử lý title của trang web
 let docTitle = document.title;
 window.addEventListener("blur", () => {
   document.title = "See you again :(";
