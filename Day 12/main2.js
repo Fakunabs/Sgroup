@@ -8,7 +8,7 @@ const sendButton = document.getElementById("send");
 
 // Lấy dữ liệu từ server và render lên giao diện
 axios
-  .get("https://63e4a5638e1ed4ccf6e2de9d.mockapi.io/fakunabs/massage/Chat")
+  .get("https://63e393dec919fe386c09bbaa.mockapi.io/sgroup/message")
   .then((response) => {
     response.data.forEach((message) => {
       let messageClass, profileClass, profileName;
@@ -62,7 +62,7 @@ sendButton.addEventListener("click", function () {
   else {
     // Gửi tin nhắn mới lên server
     axios
-    .post("https://63e4a5638e1ed4ccf6e2de9d.mockapi.io/fakunabs/massage/Chat", {
+    .post("https://63e393dec919fe386c09bbaa.mockapi.io/sgroup/message", {
       content: message,
       name: name,
       key: accKey,
