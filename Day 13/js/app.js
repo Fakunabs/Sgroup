@@ -10,6 +10,7 @@ const answerInput = document.getElementById("answer-input");
 const questionList = document.getElementById("questions-list");
 const submitBtn = document.getElementsByClassName("submitBtn");
 const showAnswer = document.getElementsByClassName("show-answer")[0];
+let id = 0;
 
 showBtn.addEventListener("click", function () {
   questionCard.classList.add("showCard");
@@ -20,7 +21,7 @@ closeBtn.addEventListener("click", function () {
 });
 
 
-submitBtn[0].addEventListener("click", function () {
+submitBtn[id].addEventListener("click", function () {
   questionList.innerHTML += `
         <div class="card card-body flashcard my-3">
           <h4 class="text-capitalize">${questionInput.value}</h4>
@@ -30,10 +31,11 @@ submitBtn[0].addEventListener("click", function () {
             <a href="#" id="edit-flashcard" class=" btn my-1 edit-flashcard text-uppercase" data-id="">edit</a>
             <a href="#" id="delete-flashcard" class=" btn my-1 delete-flashcard text-uppercase">delete</a>
           </div>`;
-  const showAnswer = document.getElementsByClassName("show-answer")[0];
-  const answer = document.getElementsByClassName("answer")[0];
+  const showAnswer = document.getElementsByClassName("show-answer")[id];
+  const answer = document.getElementsByClassName("answer")[id];
   showAnswer.addEventListener("click", function () {
-    answer.classList.toggle("showCard");
-  });
+  answer.classList.toggle("showCard");
+  
+});
 });
 
