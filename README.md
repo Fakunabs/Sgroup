@@ -1,1 +1,2 @@
 # S-Group
+This direcotry contains the source code of the S-Group project. The project is a web application that allows users to create and manage groups of people. This is all of intermediate Front End Web Development Projects. The project is built using HTML, CSS, JavaScript, and jQuery. The project is hosted on GitHub Pages. The project is built using the Bootstrap framework. The project is built using the Font Awesome framework. The project is built using the Google Fonts API. The project is built using the jQuery framework. The project is built using the jQuery UI.
