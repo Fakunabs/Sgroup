@@ -153,9 +153,6 @@ p {
 }
 
 /* body */
-.col {
-
-}
 .col-head {
     display: flex;
     justify-content: space-between;
