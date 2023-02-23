@@ -10,6 +10,7 @@ const answerInput = document.getElementById("answer-input");
 const questionList = document.getElementById("questions-list");
 const submitBtn = document.getElementsByClassName("submitBtn");
 
+
 /* This is adding an event listener to the showBtn. When the showBtn is clicked, the questionCard
 classList is added the class "showCard". */
 showBtn.addEventListener("click", function () {
