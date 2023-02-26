@@ -36,7 +36,7 @@
           </div>
         </form>
         <form class="form form-edit">
-          <img class="btn-close" src="./static/add.png" alt="close" />
+          <img class="btn-close-edit" src="./static/add.png" alt="close" />
           <h2 class="form-head">Edit todo</h2>
           <div class="form-body">
             <input
@@ -71,7 +71,7 @@
                 <label for="2">Finished</label>
               </div>
             </div>
-            <input type="submit" id="submit" value="Submit" />
+            <input type="submit" id="submit-edit" value="Submit" />
           </div>
         </form>
       </div>
@@ -94,134 +94,26 @@
         <div class="col">
           <div class="col-head bg-blue">
             <span class="title"> Todo </span>
-            <span id="todo-counter" class="counter"> 3 </span>
+            <span id="todo-count" class="counter"></span>
           </div>
           <div class="col-divider bg-blue"></div>
-          <div class="col-body" id="todo">
-            <div class="box" id="${item.id}">
-              <!-- ở đây -->
-              <div class="box-head">
-                <div class="box-title">
-                  <div class="category">${item.category}</div>
-                  <h3 class="title">${item.title}</h3>
-                </div>
-                <div class="box-action">
-                  <div class="icon">
-                    <img
-                      class="edit-btn"
-                      src="./static/Edit.png"
-                      alt="edit"
-                      data-id="${item.id}"
-                    />
-                  </div>
-                  <div class="icon">
-                    <img
-                      class="delete-btn"
-                      src="./static/Delete.png"
-                      alt="delete"
-                      data-id="${item.id}"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="box-divider"></div>
-              <div class="box-body">
-                <p class="box-desc content">${item.content}</p>
-                <div class="box-time">
-                  <img src="./static/time.png" alt="time" />
-                  <span>${item.time}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="col-body" id="todo"></div>
         </div>
         <div class="col">
           <div class="col-head bg-yellow">
             <span class="title"> Doing </span>
-            <span id="doing-counter" class="counter"> 3 </span>
+            <span id="doing-count" class="counter"></span>
           </div>
           <div class="col-divider bg-yellow"></div>
-          <div class="col-body" id="doing">
-            <div class="box" id="${item.id}">
-              <!-- ở đây -->
-              <div class="box-head">
-                <div class="box-title">
-                  <div class="category">${item.category}</div>
-                  <h3 class="title">${item.title}</h3>
-                </div>
-                <div class="box-action">
-                  <div class="icon">
-                    <img
-                      class="edit-btn"
-                      src="./static/Edit.png"
-                      alt="edit"
-                      data-id="${item.id}"
-                    />
-                  </div>
-                  <div class="icon">
-                    <img
-                      class="delete-btn"
-                      src="./static/Delete.png"
-                      alt="delete"
-                      data-id="${item.id}"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="box-divider"></div>
-              <div class="box-body">
-                <p class="box-desc content">${item.content}</p>
-                <div class="box-time">
-                  <img src="./static/time.png" alt="time" />
-                  <span>${item.time}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="col-body" id="doing"></div>
         </div>
         <div class="col">
           <div class="col-head bg-green">
             <span class="title"> Finished </span>
-            <span id="finished-counter" class="counter"> 3 </span>
+            <span id="finished-count" class="counter"></span>
           </div>
           <div class="col-divider bg-green"></div>
-          <div class="col-body" id="finished">
-            <div class="box" id="${item.id}">
-              <!-- ở đây -->
-              <div class="box-head">
-                <div class="box-title">
-                  <div class="category">${item.category}</div>
-                  <h3 class="title">${item.title}</h3>
-                </div>
-                <div class="box-action">
-                  <div class="icon">
-                    <img
-                      class="edit-btn"
-                      src="./static/Edit.png"
-                      alt="edit"
-                      data-id="${item.id}"
-                    />
-                  </div>
-                  <div class="icon">
-                    <img
-                      class="delete-btn"
-                      src="./static/Delete.png"
-                      alt="delete"
-                      data-id="${item.id}"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="box-divider"></div>
-              <div class="box-body">
-                <p class="box-desc content">${item.content}</p>
-                <div class="box-time">
-                  <img src="./static/time.png" alt="time" />
-                  <span>${item.time}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="col-body" id="finished"></div>
         </div>
       </div>
     </div>
