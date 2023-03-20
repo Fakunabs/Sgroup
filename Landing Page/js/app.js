@@ -14,7 +14,7 @@ const minuteTime = document.querySelector(
 const secondTime = document.querySelector(
   ".time-count.second > span:nth-child(1)"
 );
-const comingDay = new Date(2023, 01, 29).getTime();
+const comingDay = new Date(2024, 01, 29).getTime();
 
 const roadMapListWrap = document.querySelector(".roadmap__list__wrap");
 const listItemsWrap = document.querySelector(".about__why-choose-us__wrap");
