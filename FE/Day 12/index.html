@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Box</title>
+    <link rel="icon" type="image/png" href="./icon.png">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="flexbox">
+      <div class="chat-box">
+        <div class="chat-box-header">
+          <h3>Thinh's Chat Room<br /><small>Last active: 0 min ago</small></h3>
+        </div>
+        <div id="chat_box_body" class="chat-box-body">
+          <div id="chat_messages"></div>
+        </div>
+        <div id="typing">
+          <div>
+            <span></span> <span></span> <span></span>
+            <span class="n">Someone</span> is typing...
+          </div>
+        </div>
+        <div class="chat-box-footer">
+          <textarea
+            id="chat_input"
+            placeholder="Enter your message"
+          ></textarea>
+          <textarea
+            id="name_input"
+            placeholder="Enter your name"
+          ></textarea>
+          <button id="send">
+            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+              <path fill="#006ae3" d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="./main.js"></script> -->
+  <script src="./main2.js"></script>
+</html>

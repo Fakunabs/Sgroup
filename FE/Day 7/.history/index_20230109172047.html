@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getName() {
+        let name = prompt("Nhập tên của bạn : ")
+        if(!name) return getName()
+        return name;
+      }
+      let name
+      if(localStorage.getItem("name")) {
+        name = localStorage.getItem("name")
+      } else {
+        name = getName()
+        // localStorage.setItem("name", name)
+      }
+      document.write(`Hello ${name})`);
+      localStorage.setItem("name")
+
+
+      hello();
+    </script>
+  </body>
+  <!-- <script src="./script.js"></script> -->
+</html>

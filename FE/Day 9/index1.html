@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="icon" type="image/png" href="logo.png" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div id="signup-box">
+      <div class="left">
+        <h1>Sign up</h1>
+
+
+        <input
+          type="text"
+          id="username"
+          placeholder="Username (Without number)"
+        />
+        <input type="text" id="email" placeholder="E-mail" />
+        <input type="text" id="phonenumber" placeholder="Phone" />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password (At least 6 character)"
+        />
+        <div class="sign_up_flex">
+          <button type="submit" id="signup_submit">Sign up</button>
+          <button type="submit" id="signin-submit">Sign in</button>
+        </div>
+        <p id="text"></p>
+      </div>
+
+      <div class="right">
+        <span class="loginwith">Sign up with<br />social network</span>
+
+        <button class="social-signin facebook" onclick="window.location.href='https://facebook.com'">Sign up with Facebook</button>
+        <button class="social-signin twitter" onclick="window.location.href='https://twitter.com'">Sign up with Twitter</button>
+        <button class="social-signin google" onclick="window.location.href='https://google.com'">Sign up with Google+</button>
+      </div>
+      <div class="or">OR</div>
+    </div>
+    <!-- ------------------------------------------------------------- -->
+    <div id="signin-box">
+      <div class="left">
+        <h1>Sign in</h1>
+
+        <!-- <input type="text" id="username" placeholder="Username (Without number)" /> -->
+        <input type="text" id="signin-email" placeholder="E-mail" />
+        <!-- <input type="text" id="phonenumber" placeholder="Phone" /> -->
+        <input
+          type="password"
+          id="signin-password"
+          placeholder="Password (At least 6 character)"
+        />
+        <div class="sign_up_flex">
+          <button type="submit" id="signin-submit2">Sign in</button>
+          <button type="submit" id="signup-submit2">Sign up</button>
+        </div>
+        <p id="text"></p>
+      </div>
+
+      <div class="right">
+        <span class="loginwith">Sign in with<br />social network</span>
+
+        <button class="social-signin facebook" onclick="window.location.href='https://facebook.com'">Sign in with Facebook</button>
+        <button class="social-signin twitter" onclick="window.location.href='https://twitter.com'">Sign in with Twitter</button>
+        <button class="social-signin google" onclick="window.location.href='https://google.com'">Sign in with Google+</button>
+      </div>
+      <div class="or">OR</div>
+    </div>
+  </body>
+  <script src="app1.js"></script>
+</html>

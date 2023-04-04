@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </head>
+  <body>
+    <section class="container">
+        <div class="heading"> 
+          <img class="heading__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/laptop.svg">
+          <h1 class="heading__title">To-Do List</h1>
+        </div>
+        <form class="form">
+          <div>
+            <label class="form__label" for="todo">~ Today I need to ~</label>
+            <input class="form__input"
+                 type="text" 
+                 placeholder="Add task" style="font-size: 25px;"
+                 id="todo" 
+                 name="to-do"
+                 size="30"
+                 required>
+            <button id="add" type="submit" class="button"><span>Submit</span></button>
+          </div>
+        </form>
+        <div>
+          <ul class="toDoList">
+            <label for="todo_2">
+              <li>
+                <span> Coding
+                  <div class="icons">
+                    <i class="far fa-check-circle circle"></i>
+                    <i class="far fa-edit edit"></i>
+                    <i class="far fa-trash-alt delete"></i>
+                  </div>
+                </span>
+              </li>
+              <li>
+                <span> Sleeping
+                  <div class="icons">
+                    <i class="far fa-check-circle circle"></i>
+                    <i class="far fa-edit edit"></i>
+                    <i class="far fa-trash-alt delete"></i>
+                  </div>
+                </span>
+              </li>
+              <li>
+                <span> Eating
+                  <div class="icons">
+                    <i class="far fa-check-circle circle"></i>
+                    <i class="far fa-edit edit"></i>
+                    <i class="far fa-trash-alt delete"></i>
+                  </div>
+                </span>
+              </li>
+            </label>
+          </ul>
+        </div>
+        <!-- Tạo 1 thẻ div cho nút clear  -->
+        <div id="clear">
+          <button class="button clearBtn" id="clear"><span>Clear</span></button>
+        </div>
+      </section>
+  </body>
+  <script src="./script.js"></script>
+</html>
