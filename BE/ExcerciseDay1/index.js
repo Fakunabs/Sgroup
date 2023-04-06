@@ -1,94 +1,67 @@
 const express = require('express');
-const fs = require('fs');
-const app = express();
-const port = 3000;
+const user_router = express.Router();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Danh sách user
+let users = [
+    {
+        id: 1,
+        fullname: 'Nguyen Huy Tuong',
+        gender: true,
+        age: 18
+    },
+    {
+        id: 2,
+        fullname: 'Nguyen Thi Tuong',
+        gender: false,
+        age: 15
+    }
+];
 
-var users = [];
+// Lấy danh sách user
+user_router.get('/', (req, res) => {
+    res.status(200).json(users);
+});
 
-function getUsers() {
-    let allUsersStr = fs.readFileSync('index.txt', 'utf8');
-    allUsersStr.split('\n').forEach(line => {
-        users.push(JSON.parse(line))
-    })
-    console.log(users)
-}
+// Lấy chi tiết user
+user_router.get('/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const user = users.find(u => u.id === id);
 
-getUsers()
-
-app.get('/users', function (req, res, next) {
-    console.log(users);
-    res.send(users);
-    next();
-})
-
-app.get('/users/:id', function (req, res, next) {
-    let user = users.find(user => user.id === req.params.id);
-    if (user != null) {
-        console.log(user);
-        res.send(user);
+    if (user) {
+        res.status(200).json(user);
     } else {
-        console.log("user is not found");
-        res.send("user is not found");
+        res.status(404).json({ message: 'User not found' });
     }
-    next();
-})
+});
 
-app.put('/users/:id', function (req, res, next) {
-    let user = users.find(user => user.id === req.params.id)
-    if (user != null) {
-        user.name = req.query.name
-        user.gender = req.query.gender
-        user.age = req.query.age
-        console.log(user);
-        res.send(user);
-        let allUsersString = ""
-        for (let user of users) {
-            allUsersString += ("\n" + JSON.stringify(user))
-        }
-        fs.writeFileSync('index.txt', allUsersString)
+// Cập nhật thông tin user
+user_router.put('/:id', (req, res,) => {
+    const id = parseInt(req.params.id);
+    const index = users.findIndex(u => u.id === id);
+
+    if (index !== -1) {
+        users[index] = { id, ...req.body };
+        res.status(204).send();
     } else {
-        console.log("user is not found");
-        res.send("user is not found");
+        res.status(404).json({ message: 'User not found' });
     }
-    next()
-})
+});
 
-app.post('/users', function (req, res, next) {
-    const id = req.query.id;
-    const name = req.query.name;
-    const gender = req.query.gender;
-    const age = req.query.age;
+// Thêm user mới
+user_router.post('/', (req, res) => {
+    let id;
+    if (!req.body.id) {  id = users.length + 1 }
+    else { id = parseInt(req.body.id) };
+    const newUser = { id, ...req.body };
+    users.push(newUser);
+    res.status(201).json(newUser);
+});
 
-    users.push(req.query)
-    console.log(req.query)
-    // console.log(typeof req.query) //Object
-    res.send(`Received user with parameters: id=${id}, name=${name}, gender=${gender}, age=${age}`);
-    let userStr = fs.readFileSync('index.txt', 'utf8');
-    let newUserStr = userStr + "\n" + JSON.stringify(req.query)
-    fs.writeFileSync('index.txt', newUserStr);
-    next();
-})
-
-app.delete('/users/:id', function (req, res, next) {
-    let user = users.find(u => u.id === req.query.id)
-    users.splice(user, 1)
-    console.log(users)
-    let allUsersString = "";
-    for (let user of users) {
-        if (user == users[0]) {
-            allUsersString += JSON.stringify(user)
-        } else {
-            allUsersString += ("\n" + JSON.stringify(user))
-        }
-    }
-    fs.writeFileSync('index.txt', allUsersString)
-    res.send(users)
-    next()
-})
-
-app.listen(port, function () {
-    console.log(`listening on port ${port}`);
-})
+// Xóa user
+user_router.delete('/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    users = users.filter(u => u.id !== id);
+    res.status(204).send();
+});
+// Exports cho biến user_router
+module.exports = user_router;
